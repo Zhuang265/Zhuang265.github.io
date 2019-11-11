@@ -25,108 +25,135 @@
                    <h2>从远程克隆</h2>
                      1.首先登录git hub ,创建一个新的仓库,名字叫  gitskills :<br>
 
-            2. 我们勾选 initialize thisrepository with a readme, 这样git hub git hub  会自动为我们创建一个 readme.md文件,创建完毕后,可以看到readme.md 文件<br>
+                     2. 我们勾选 initialize thisrepository with a readme, 这样git hub git hub  会自动为我们创建一个 readme.md文件,创建完毕后,可以看到readme.md 文件<br>
 
-   3. 下一步 用命令 git clone  克隆到本地库:<br>
+                    3. 下一步 用命令 git clone  克隆到本地库:<br>
 
-      git clone git@github.com:michaeliao/gitshkills.git<br>
+                    git clone git@github.com:michaeliao/gitshkills.git<br>
 
-      注: michaeliao 替换为:github 用户名 : <br>
+                      注: michaeliao 替换为:github 用户名 : <br>
 
-   4. cd  gitskills<br>
+                     4. cd  gitskills<br>
 
-   5. ls<br>
+                    5. ls<br>
 
-      小结: 要克隆一个仓库,首先必须知道仓库的地址,然后 git
+                     小结: 要克隆一个仓库,首先必须知道仓库的地址,然后 git
 
-      clone 命令克隆 ,git支持多种协议, 包括https,订单通过
+                     clone 命令克隆 ,git支持多种协议, 包括https,订单通过
 
-      ssh 支持的原声 git 协议速度最快.<br>
+                      ssh 支持的原声 git 协议速度最快.<br>
 
-     <a  style = "color :red;" >注</a>    :我们可以在远程仓库复制下来(链接->具体为点击仓库->然后点击克隆或下载->他会弹出一个链接地址->我们只需复制在终端输入 ls->git clone 后面写链接地址就可以克隆远程了).<br><br>
-     <h2>分支管理</h2>
+                     <a  style = "color :red;" >注</a>    :我们可以在远程仓库复制下来(链接->具体为点击仓库->然后点击克隆或下载->他会弹出一个链接地址->我们只需复制在终端输入 ls->git clone 后面写链接地址就可以克隆远程了).<br><br>
+                     <h2>分支管理</h2>
 
-​    解释: 分支就是科幻电影了的平行宇宙,当你正在电脑面前努力学习git的时候另一个你正在另一个平行宇宙努力学习,两个你不见面互补干扰,一单结合就把两个人所学的融合在一起我理解的是就是分身,两个人练两种武功,平时,互不干扰,自己忙自己的,一旦融合就会把他们所学的武功合二为一)<br>
+                ​    解释: 分支就是科幻电影了的平行宇宙,当你正在电脑面前努力学习git的时候另一个你正在另一个平行宇宙努力学习,两个你不见面互补干扰,一单结合就把两个人所学的融合在一起我理解的是就是分身,两个人练两种武功,平时,互不干扰,自己忙自己的,一旦融合就会把他们所学的武功合二为一)<br>
 
-   1 区别: 给他的分之与众不同的是:无论创建,切换和删除分支,git在
+                   1 区别: 给他的分之与众不同的是:无论创建,切换和删除分支,git在
 
-1秒钟内就能完成,无论是1个版本还是一万个版本.<br><br>
-     <h2>一创建与合并分支</h2>
- <center>
-   <table border="1px"  width="800px">
-    <tr>
-       <td>创建合并命令</td>
-       <td>命令</td>> 
-    </tr>
-    <tr>
-       <td>git checkout -b</td>
-       <td>参数表示其创建并切换</td>> 
-    </tr>
-        <tr>
-       <td>git branch</td>
-       <td>查看当前分支</td>> 
-    </tr>
-        <tr>
-       <td>git merge</td>
-       <td>用于合并指定分支到当前分支git</td>> 
-    </tr>
-   </table>
-</center><br>
- <h4>小结<h4>
-查看分支:  <a style="color:red; font-size: 14px;font-weight:normal;"> git branch</a><br>
+                1秒钟内就能完成,无论是1个版本还是一万个版本.<br><br>
+                     <h2>一创建与合并分支</h2>
+                 <center>
+                   <table border="1px"  width="800px">
+                    <tr>
+                       <td>创建合并命令</td>
+                       <td>命令</td>> 
+                    </tr>
+                    <tr>
+                       <td>git checkout -b</td>
+                       <td>参数表示其创建并切换</td>> 
+                    </tr>
+                        <tr>
+                       <td>git branch</td>
+                       <td>查看当前分支</td>> 
+                    </tr>
+                        <tr>
+                       <td>git merge</td>
+                       <td>用于合并指定分支到当前分支git</td>> 
+                    </tr>
+                   </table>
+                </center><br>
+                 <h4>小结<h4>
+                查看分支:git branch<br>
 
-创建分支:<a style="color:red;font-size: 14px;font-weight:normal;">  git branch (name) </a><br>
+                创建分支: git branch (name) <br>
 
-切换分支: <a style="color:red;font-size: 14px;font-weight:normal;">  git checkout (name)或者 git switch (name) </a><br>
+                切换分支:  git checkout (name)或者 git switch (name) <br>
 
-创建叫切换分支:<a style="color:red;font-size: 14px;font-weight:normal;">  git checkout -b(name)或者 git switch -C</a><br>
+                创建叫切换分支: git checkout -b(name)或者 git switch -C<<br>
 
-合并某分支到当前分支: <a style="color:red;font-size:14px;font-weight:normal;"> git merge (name)</a><br>
+                合并某分支到当前分支: git merge (name)<br>
 
-删除分支:<a style="color:red;font-size: 14px;font-weight:normal;">  git branch -d (name) </a><br><br>
-  <h2>解决冲突</h2>
-  1.创建一个分支
-git checkout -b feature1<br>
+                删除分支:  git branch -d (name)<br><br>
+                  <h2>解决冲突</h2>
+                  1.创建一个分支
+                git checkout -b feature1<br>
 
-2. 在分支上更改文件
+                2. 在分支上更改文件
 
-   vim readme.txt<br>
+                   vim readme.txt<br>
 
-   3.添加到暂存区<br>
+                   3.添加到暂存区<br>
 
-   4.提交到版本库<br>
+                   4.提交到版本库<br>
 
-   5.在通过命令退回到主分支
+                   5.在通过命令退回到主分支
 
-   git  checkout  master <br>
+                   git  checkout  master <br>
 
-   6.修改主分区的readme.txt
+                   6.修改主分区的readme.txt
 
-   vim readme.txt<br>
+                   vim readme.txt<br>
 
-   7.添加到暂存区<br>
+                   7.添加到暂存区<br>
 
-   8.提交到版本库<br>
+                   8.提交到版本库<br>
 
-   9.合并分支
+                   9.合并分支
 
-   git  meger fearture1<br>
+                   git  meger fearture1<br>
 
-   10这时候发现冲突了(通过命令 查看状态 git status)发现文件冲突了<br>
+                   10这时候发现冲突了(通过命令 查看状态 git status)发现文件冲突了<br>
 
-   11 只需在次打开文件修改文件<br>
+                   11 只需在次打开文件修改文件<br>
 
-   12 重新添加到暂存区<br>
+                   12 重新添加到暂存区<br>
 
-   13 提交到版本库<br>
+                   13 提交到版本库<br>
 
-   <a syle="color:red;">小结</a>: 当git无法自动合并分支时,就必须解决冲突,解决冲突后,在提交,
+                   <a syle="color:red;">小结</a>: 当git无法自动合并分支时,就必须解决冲突,解决冲突后,在提交,
 
-   合并完成, 
+                   合并完成, 
 
-     解决冲突就是把git合并失败的文件手动编辑为我们希望的内荣在提交
+                     解决冲突就是把git合并失败的文件手动编辑为我们希望的内荣在提交
 
-   用 git log --gra配合 命令 可容易看到分支合并图
+                   用 git log --gra配合 命令 可容易看到分支合并图<br><br>
+                   <h2>git 操作</h2>
+                   <center>
+                    开始一个工作区参见: &nbsp;&nbsp;&nbsp;git help tutorial<br>
+                    clone &nbsp;&nbsp;&nbsp;克隆一个仓库到一个新目录<br>
+                    init&nbsp;&nbsp;&nbsp;创建一个空的git仓库或重新初始化一个已处在的仓库在当前变更上工作(参见: git help everyday)<br>
+                    add&nbsp;&nbsp;&nbsp;添加文件内容至索引mv移动或重命名一个文件,目录或符号链接<br>
+                    reset&nbsp;&nbsp;&nbsp;重置当前 HEAD 到指定状态rm从工作区和索引中删除文件检查历史和状态(参见: git help revisions)<br>
+                    bigsect &nbsp;&nbsp;&nbsp;通过二分法查找定位引入bug的提交<br>
+                    grep&nbsp;&nbsp;&nbsp;输出和模式匹配的行<br>
+                    log&nbsp;&nbsp;&nbsp;显示提交日志<br>
+                    show&nbsp;&nbsp;&nbsp;显示各种类型的对象拓展,标记和调校minded历史记录<br>
+                    branch&nbsp;&nbsp;&nbsp;列出,创建或删除分支<br>
+                    checkout &nbsp;&nbsp;&nbsp;切换分支或恢复工作区文件<br>
+                    commit&nbsp;&nbsp;&nbsp;记录变更到仓库<br>
+                    diff&nbsp;&nbsp;&nbsp;显示提交之间,提交和工作区之间等的差异<br>
+                    merge&nbsp;&nbsp;&nbsp;合并两个或更多开发历史<br>
+                    rebase&nbsp;&nbsp;&nbsp;在另一个分支上重新应用提交<br>
+                    tag&nbsp;&nbsp;&nbsp;创建,列出,删除,或校验yigeGPG签名的标签对象<br>
+                    协同&nbsp;&nbsp;&nbsp;(参见:git helpworkflows)<br>
+                    fetch&nbsp;&nbsp;&nbsp;从另一个仓库下载对象和引用<br>
+                    pull&nbsp;&nbsp;&nbsp;获取并整合另外的仓库或一个本地分支<br>
+                    push&nbsp;&nbsp;&nbsp;更新远程引用和相关的对象<br>
+                   
+
+                   </center>
+
+
  
 
    
