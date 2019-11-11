@@ -67,11 +67,68 @@
        <td>查看当前分支</td>> 
     </tr>
         <tr>
-       <td>git  merge</td>
+       <td>git merge</td>
        <td>用于合并指定分支到当前分支git</td>> 
     </tr>
    </table>
 </center><br>
+ <h4>小结<h4>
+查看分支:  <a style="color:red;">  git branch  </a><br>
+
+创建分支:<a style="color:red;">  git branch (name) </a><br>
+
+切换分支: <a style="color:red;">  git checkout (name)或者 git switch (name) </a><br>
+
+创建叫切换分支:<a style="color:red;">  git checkout -b(name)或者 git switch -C</a><br>
+
+合并某分支到当前分支: <a style="color:red;"> git merge (name)</a><br>
+
+删除分支:<a style="color:red;">  git branch -d (name) </a><br><br>
+  <h2>解决冲突</h2>
+  1.创建一个分支
+git checkout -b feature1<br>
+
+2. 在分支上更改文件
+
+   vim readme.txt<br>
+
+   3.添加到暂存区<br>
+
+   4.提交到版本库<br>
+
+   5.在通过命令退回到主分支
+
+   git  checkout  master <br>
+
+   6.修改主分区的readme.txt
+
+   vim readme.txt<br>
+
+   7.添加到暂存区<br>
+
+   8.提交到版本库<br>
+
+   9.合并分支
+
+   git  meger fearture1<br>
+
+   10这时候发现冲突了(通过命令 查看状态 git status)发现文件冲突了<br>
+
+   11 只需在次打开文件修改文件<br>
+
+   12 重新添加到暂存区<br>
+
+   13 提交到版本库<br>
+
+   <a syle="color:red;">小结</a>: 当git无法自动合并分支时,就必须解决冲突,解决冲突后,在提交,
+
+   合并完成, 
+
+     解决冲突就是把git合并失败的文件手动编辑为我们希望的内荣在提交
+
+   用 git log --gra配合 命令 可容易看到分支合并图
+ 
+
    
 
 
@@ -85,7 +142,7 @@
               
                     
                 </p>
-                <img src="./2.png">
+
                 <p><a href="mailto:{{ site.email }}">{{     site.email }}</a>
                 </p>
                 <ul class="list-inline banner-social-buttons">
