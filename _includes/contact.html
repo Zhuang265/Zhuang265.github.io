@@ -2,9 +2,54 @@
     <section id="contact" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2>Contact</h2>
-                <p>Dolor reprehenderit repellendus, optio labore odio at tempore debitis nisi. Quasi debitis tenetur eaque molestias non porro odio sapiente.</p>
-                <p><a href="mailto:{{ site.email }}">{{ site.email }}</a>
+                <h2>远程仓库</h2>
+                  <p>
+                1 创建 ssh key: <br>
+                ssh -keygen -t rsa -C"123456@qq.com"<br>
+                2.进入git hub(打开 设置->sshkey选项->点击add ssh key ->在文本里添加 id.rea.pub)<br>
+                3. cd ~/.ssh  进入目录 
+
+                 4. cat id_rsa.pub(得到秘钥)<br>
+                 5. 粘贴到github(把秘钥)<br><br>
+                 <h2>添加远程仓库</h2>
+                  1.打开 git hub 新建一个项目<br>
+
+                  2.添加命令(git remote add origin git@github.com:michaellliao/learn.git)<br>
+
+                   注意: origin远程库的名字,可以更改,把michaelliao换成自己的github账户名/earn. git(可以通过复制git hub 里面的)<br>
+
+                3. git push -u origin master <br>
+
+                注意: origin必须和上面的相同,否则不成功.  git  push 命令.实际吧master推送到远方
+                由于第一次推送的master是空的,所以我们加上 -u git不但会吧本地的master推送到远程新的master,还会把本地master远程master关联起,以后可以省略<br>
+                   <h2>从远程克隆</h2>
+                     1.首先登录git hub ,创建一个新的仓库,名字叫  gitskills :<br>
+
+            2. 我们勾选 initialize thisrepository with a readme, 这样git hub git hub  会自动为我们创建一个 readme.md文件,创建完毕后,可以看到readme.md 文件<br>
+
+   3. 下一步 用命令 git clone  克隆到本地库:<br>
+
+      git clone git@github.com:michaeliao/gitshkills.git<br>
+
+      注: michaeliao 替换为:github 用户名 : <br>
+
+   4. cd  gitskills<br>
+
+   5. ls<br>
+
+      小结: 要克隆一个仓库,首先必须知道仓库的地址,然后 git
+
+      clone 命令克隆 ,git支持多种协议, 包括https,订单通过
+
+      ssh 支持的原声 git 协议速度最快.<br>
+
+     <a  style = "color :red;" >注</a>    :我们可以在远程仓库复制下来(链接->具体为点击仓库->然后点击克隆或下载->他会弹出一个链接地址->我们只需复制在终端输入 ls->git clone 后面写链接地址就可以克隆远程了).
+
+ 
+              
+                    
+                </p>
+                <p><a href="mailto:{{ site.email }}">{{     site.email }}</a>
                 </p>
                 <ul class="list-inline banner-social-buttons">
                     {% for network in site.social %}
