@@ -4,16 +4,26 @@
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
                     <h2>创建版本库</h2>
-                    <p>head 指向的版本就是当前版本,因此,git允许我们在版本的历史之间穿梭 使用 git reset --hard commit _id穿梭, 用git log可以查看添加历史,以便确定回退到哪个版本要重返未来, 用git reflog 查看命令历史,以遍确定要回到未来的某个版本.
-                     注意: 如果你使用reset退回到某个历史,只能回退,不能厚
+                    <p>head 指向的版本就是当前版本,因此,git允许我们在版本的历史之间穿梭 使用 git reset --hard commit _id穿梭, 用git log可以查看添加历史,以便确定回退到哪个版本要重返未来, 用git reflog 查看命令历史,以遍确定要回到未来的某个版本.<br>
+                     注意: 如果你使用reset退回到某个历史,只能回退,不能厚<br>
+                     <h2>工作区和版本库</h2>
+                     工作区(working directory)就是电脑里能看到的目录 如我的目录wo文件夹就是一个工作区<br>
+                     版本库(repository)工作区有一个目录.git,这个不算工作去,而是git的版本库
+git的版本库里存了很多东西,其中最重要的就是成为stage (会叫 index) 的暂存区 换有就是我们自动创建的的一个分之 master ,以及只想master 的之一个指针叫HEAD
 
-  
+git和其他版本控制系统如svn的一个不同之处就是有暂存区的概念<br>
+操作步骤:前面我们网git 版本库里添加的时候,是分两部执行的:
 
+第一步: git add 把文件添加进去,实际上就是吧文件修改添加到暂存区:<br>
 
+第二步: git  commit 提交更该
 
+实际上就是把暂存区的内容提交到当前分之
 
+因为我们vhuangjiangit 版本库时 git自动为我们创建了唯一一master分之,所以,在git commit 
 
-git和其他版本控制系统如svn的一个不同之处就是有暂存区的概念</p>
+就是往master分之上提交更改
+</p>
                     <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>
                 </div>
             </div>
